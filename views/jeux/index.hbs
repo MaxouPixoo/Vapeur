@@ -1,0 +1,14 @@
+<ul class="listeJeux">
+    {{#each games}}
+        <li class="listeJeux">
+            <a class="lienJeux" href="/games/{{id}}">
+                <img class="imageJeux" src="/uploads/{{image}}"/>
+                <h1><p class="texteJeux">{{title}}</p></h1>
+            </a>
+        </li>
+    {{/each}}
+    <a class="lienJeux" href="/games/create">
+    <img class="imageJeux" src="/picture/ajouter/ajouter-jeux.png"/>
+    <h1><p class="texteJeux">Ajouter</p></h1>
+    </a>
+</ul>   

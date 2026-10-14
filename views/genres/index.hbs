@@ -1,0 +1,10 @@
+<ul class="listeGenre">
+    {{#each genres}}
+        <li class="listeImageGenre">
+            <a class="lienImageGenre" href="/genres/{{id}}">
+                <img class="imageGenre"src="/picture/genres/{{image}}"/>
+                <h1><p class="texteImageGenre">{{name}}</p></h1>
+            </a>
+        </li>
+    {{/each}}
+</ul>

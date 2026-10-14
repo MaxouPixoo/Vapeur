@@ -1,0 +1,47 @@
+<form method="POST" action="/games/{{id}}/edit" enctype="multipart/form-data">
+    <div class="divModifierJeux">
+        <img class="imageModifierJeux" src="/uploads/{{image}}"/>
+        <ul>
+            <li class="listeDetailsJeux">
+                <input class="titreModifierJeux" name="title" placeholder="Titre" value="{{title}}" required>
+                <textarea class="descriptionModifierJeux" name="desc" placeholder="Description" required>{{desc}}</textarea>
+                <p class="texteEditeurModifierJeux">
+                    Éditeur : 
+                    <select class="editeurModifierJeux" name = "publisherId" required>
+                        {{#each editeurs}}
+                            {{#if (eq id ../publisherId)}}
+                                <option value ="{{id}}" selected>{{name}}</option>
+                            {{else}}
+                                <option value ="{{id}}">{{name}}</option>
+                            {{/if}}
+                        {{/each}}
+                    </select>
+                </p>
+                <p class="texteGenreModifierJeux">
+                    Genre : 
+                    <select class="genreModifierJeux" name = "genreId">
+                        {{#each genres}}
+                            {{#if (eq id ../genreId)}}
+                                <option value ="{{id}}" selected>{{name}}</option>
+                            {{else}}
+                                <option value ="{{id}}">{{name}}</option>
+                            {{/if}}
+                        {{/each}}
+                    </select>
+                </p>
+                <label class="miseEnAvantModifierJeux"> Mise en avant du jeux :
+                    {{#if featured}}
+                        <input class="checkboxMiseEnAvant" type="checkbox" name="featured"  checked>
+                    {{else}}
+                        <input class="checkboxMiseEnAvant" type="checkbox" name="featured" >
+                    {{/if}}
+                </label>
+            </li>
+        </ul>
+    </div>
+    <label class="inserezImageModifier">Image actuelle : {{image}}</label>
+    <input class="dragAndDrop" type="file" name="image" value="/uploads/{{image}}"></input>
+    <div class="boutonAnnulerEnregistrer">
+        <button class="enregistrer">Mettre à jour</button>
+    </div>
+</form>

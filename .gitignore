@@ -1,0 +1,45 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# Logs
+logs/
+*.log
+*.sqlite-journal
+
+# Prisma
+prisma/database.db
+#prisma/*.sqlite
+#prisma/*.db-journal
+#prisma/migrations/*/migration_lock.toml
+#prisma/migrations/*/migration.sql
+
+# VSCode
+.vscode/
+!.vscode/settings.json  # si tu veux versionner ce fichier
+
+# Build
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lockfiles (optionnel)
+#package-lock.json
+#yarn.lock
+#pnpm-lock.yaml
+
+# Misc
+*.tmp
+
+.idea/
+
+#images
+
+public/uploads/

@@ -1,0 +1,14 @@
+<ul class="listeEditeur">
+    {{#each editeurs}}
+        <li class="listeEditeur">
+            <a class="lienEditeur" href="/publishers/{{id}}" >
+                <img class="imageEditeur" src="/uploads/{{image}}"/>
+                <h1><p class="texteEditeur">{{name}}</p></h1>
+            </a>
+        </li>
+    {{/each}}
+    <a class="lienEditeur" href="/publishers/ajouter">
+        <img class="imageEditeur" src="/picture/ajouter/ajouter-editeur.png"/>
+        <h1><p class="texteEditeur">Ajouter</p></h1>
+    </a>
+</ul>

@@ -1,0 +1,10 @@
+<ul class="listeJeux">
+    {{#each games}}
+        <li class="listeJeux">
+            <a class="lienJeux" href="/games/{{id}}">
+                <img class="imageJeux" src="/uploads/{{image}}"/>
+                <h1><p class="texteJeux">{{title}}</p></h1>
+            </a>
+        </li>
+    {{/each}}
+</ul>

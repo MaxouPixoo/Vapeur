@@ -1,0 +1,16 @@
+<div class="divDetailsJeux">
+    <img class="imageDetailsJeux" src="/uploads/{{image}}"/>
+    <ul>
+        <li class="listeDetailsJeux">
+            <div class="divTitreDetailsJeux">
+                <p class="titreDetailsJeux">{{title}}</p>
+                <a class="lienModifier" href="/games/{{id}}/edit" title="Modifier"><img class="imageModifier" src="/picture/logo/modifier.jpg"></a>
+                <a class="lienSupprimer" href="/games/{{id}}/delete" title="Supprimer"><img class="imageSupprimer" src="/picture/logo/supprimer.jpg"></a>
+            </div>
+            <p class="dateDetailsJeux">{{releaseDate}}</p>
+            <p class="descriptionDetailsJeux">{{desc}}</p>
+            <a href="/publishers/{{publisherId}}"  class="editeurDetailsJeux" title="Voir {{publisher}}">Éditeur : {{publisher}}</a>
+            <a href="/genres/{{genreId}}" class="genreDetailsJeux" title="Voir {{genre}}">Genre : {{genre}}</a>
+        </li>
+    </ul>
+</div>

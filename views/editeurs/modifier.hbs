@@ -1,0 +1,13 @@
+<form action="/publishers/{{publisher.id}}" method="POST" enctype="multipart/form-data">
+    <div class="allModifierEditeur">
+        <input class="titreModifierEditeur" type="text" name="name" value="{{publisher.name}}" required>
+        <img class="imageEditeur"src="/uploads/{{publisher.image}}"/>
+        <div class="imageModifierEditeur">
+            <p>Image actuel : {{publisher.image}}</p>
+            <input class="dragAndDrop"  accept = ".png, .gif, .jpeg" type="file" name="image"></input>
+        </div>
+        <div class="boutonAnnulerEnregistrer">
+            <button class="enregistrer" type="submit">Enregistrer</button>
+        </div>
+    </div>
+</form>

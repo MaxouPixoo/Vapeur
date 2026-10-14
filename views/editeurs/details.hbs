@@ -1,0 +1,8 @@
+
+<div class="divTitreDetailsEditeur">
+    <p class="titreEditeur">{{editeur.name}}</p>
+    <a class="lienModifier" href="/publishers/{{editeur.id}}/edit" title="Modifier"><img class="imageModifier" src="/picture/logo/modifier.jpg"></a>
+    <a class="lienSupprimer" href="/publishers/{{editeur.id}}/confirm" title="Supprimer"><img class="imageSupprimer" src="/picture/logo/supprimer.jpg"></a>
+</div>
+
+{{> listeJeux games=editeur.games }}

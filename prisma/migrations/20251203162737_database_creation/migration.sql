@@ -1,0 +1,24 @@
+-- CreateTable
+CREATE TABLE "Games" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "title" TEXT NOT NULL,
+    "desc" TEXT NOT NULL,
+    "releaseDate" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "genreId" INTEGER NOT NULL,
+    "publisherId" INTEGER NOT NULL,
+    "featured" BOOLEAN NOT NULL DEFAULT false,
+    CONSTRAINT "Games_genreId_fkey" FOREIGN KEY ("genreId") REFERENCES "Genres" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "Games_publisherId_fkey" FOREIGN KEY ("publisherId") REFERENCES "Publishers" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "Genres" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL
+);
+
+-- CreateTable
+CREATE TABLE "Publishers" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL
+);

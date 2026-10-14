@@ -1,0 +1,28 @@
+<h1 class="titre">Ajouter un jeu</h1>
+<form class="formCreerEditeur" method="POST" action="/games/create" enctype="multipart/form-data">
+
+    <input class="titreModifierEditeur" name="title" placeholder="Titre" required><br><br>
+
+    <textarea id="descriptionCreerJeux" class="descriptionModifierJeux" name="desc" placeholder="Description" required></textarea><br><br>
+    <select id="genreCreerJeux" class="texteGenreModifierJeux" name = "genreId">
+        {{#each genres}}
+            <option value ="{{id}}">{{name}}</option>
+        {{/each}}
+    </select>
+    <select id="editeurCreerJeux" class="editeurModifierJeux" name = "publisherId" required>
+        {{#each editeurs}}
+            <option value ={{id}}>{{name}}</option>
+        {{/each}}
+    </select>
+    <label id="misEnAvantCreerJeux" class="miseEnAvantModifierJeux">
+        Mis en avant : 
+        <input type="checkbox" name="featured">
+    </label>
+
+    <label fichier> </label>
+    <input id="imageCreerJeux" class="dragAndDrop" accept = ".png, .gif, .jpeg" type="file" name="image"></input>
+    <div class="boutonAnnulerEnregistrer">
+        <button class="enregistrer">Créer</button>
+    </div>
+</form>
+

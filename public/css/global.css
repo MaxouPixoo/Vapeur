@@ -1,0 +1,524 @@
+/*global ------------------------------------------------------------------------------------------------------------------- */
+body{
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding-top: 5vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+
+input{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo{
+  width: 5vw;
+  height: auto;
+  justify-content: center;
+  margin-left:0.5%;
+}
+
+.buttonheader {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 10px 8px;
+  display: inline-block;
+  font-size: clamp(12px, 1.2vw, 18px);
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -0.1vw;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.25s ease;
+}
+
+.buttonheader:hover .underline {
+  width: 100%;
+}
+
+.navmenu{
+  justify-content: center;
+}
+
+.allheader{
+  display:flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width:100%;
+  z-index: 1000;
+  background-color: black;
+}
+
+.allbuttonheader{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  white-space: nowrap;
+}
+
+footer{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titre{
+  text-align: center;
+}
+
+/* section genres index -------------------------------------------------------------------------------------------------------------------*/
+.listeGenre{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.listeImageGenre{
+  display : flex;
+  flex: 0 0 auto;
+}
+
+.lienImageGenre{
+  width: 30vw;
+  height: 18vw;
+  overflow:hidden;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+}
+
+.texteImageGenre{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin:0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.imageGenre{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.lienImageGenre:hover .texteImageGenre{
+  opacity: 1;
+}
+
+.lienImageGenre:hover .imageGenre{
+  opacity: 0.5;
+}
+
+/* section genres détails ------------------------------------------------------------------------------------------------------------------- */
+
+
+/*section liste jeux ------------------------------------------------------------------------------------------------------------------- */
+.listeJeux{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14vw, 1fr));
+  gap: 20px;
+  padding-left: 0.5%;
+}
+
+.lienJeux{
+  width: 15vw;
+  height: 20vw;
+  overflow:hidden;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+}
+
+.texteJeux{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin:0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  width:98%;
+  text-align: center;
+}
+
+.imageJeux{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.lienJeux:hover .texteJeux{
+  opacity: 1;
+}
+
+.lienJeux:hover .imageJeux{
+  opacity: 0.5;
+}
+
+/*section liste éditeurs ------------------------------------------------------------------------------------------------------------------- */
+.listeEditeur{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14vw, 1fr));
+  gap: 20px;
+}
+
+.lienEditeur{
+  width: 15vw;
+  height: 15vw;
+  overflow:hidden;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+}
+
+.texteEditeur{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin:0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  width:98%;
+  text-align: center;
+}
+
+.imageEditeur{
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.5s;
+  object-position: center;
+}
+
+.lienEditeur:hover .texteEditeur{
+  opacity: 1;
+}
+
+.lienEditeur:hover .imageEditeur{
+  opacity: 0.5;
+}
+
+/*section détails jeux ------------------------------------------------------------------------------------------------------------------- */
+.divDetailsJeux{
+  display: flex;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.listeDetailsJeux{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titreDetailsJeux{
+  font-size: 3vw;
+  margin: 0;
+}
+
+.dateDetailsJeux{
+  margin-top: 0;
+}
+
+.imageDetailsJeux{
+  height: 40vw;
+  width: 30vw;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.descriptionDetailsJeux{
+  font-size: 1.5vw;
+}
+
+.editeurDetailsJeux{
+  margin-top: auto;
+  text-decoration: none;
+  color:white;
+  margin-bottom: 4px;
+  font-size: 90%;
+}
+
+.genreDetailsJeux{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  color: white;
+  font-size: 90%;
+}
+
+.divTitreDetailsJeux{
+  display: flex;
+}
+
+.imageSupprimer{
+  width:3vw;
+  height: auto;
+  margin-left: 1vw;
+  margin-top: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  filter: invert(0%);
+  transition: filter 0.5s;
+}
+
+.lienSupprimer:hover .imageSupprimer{
+  filter: invert(100%)
+}
+
+.imageModifier{
+  width:3vw;
+  height: auto;
+  margin-left: 1vw;
+  margin-top: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  filter: invert(0%);
+  transition: filter 0.5s;
+}
+
+.lienModifier:hover .imageModifier{
+  filter: invert(100%)
+}
+
+/*section modifier jeux ------------------------------------------------------------------------------------------------------------------- */
+.divModifierJeux{
+  display: flex;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.listeModifierJeux{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageModifierJeux{
+  height: 40vw;
+  width: 30vw;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.titreModifierJeux{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 3vw;
+  margin: 0;
+}
+
+.descriptionModifierJeux{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 1.5vw;
+  margin-top: 1vw;
+  height: 100%;
+  margin-bottom: 1vw;
+}
+
+.texteGenreModifierJeux{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  font-size: 90%;
+  color:white;
+}
+
+.genreModifierJeux{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.texteEditeurModifierJeux{
+  margin-top: auto;
+  text-decoration: none;
+  margin-bottom: 4px;
+  font-size: 90%;
+}
+
+.editeurModifierJeux{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.miseEnAvantModifierJeux{
+  display: flex;
+  align-items: center;
+}
+
+.inserezImageModifier{
+  margin-left: 3vw;
+  font-size: small;
+}
+
+.dragAndDrop[type="file"] {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+}
+
+.enregistrer{
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  font-size: large;
+  transition: background-color 0.5s;
+  transition: color 0.5s;
+}
+
+.enregistrer:hover{
+  background-color: white;
+  color: black;
+}
+
+.annuler{
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  font-size: large;
+  transition: background-color 0.5s;
+  transition: color 0.5s;
+  margin-left: 3vw;
+}
+
+.annuler:hover{
+  background-color: white;
+  color: black;
+}
+
+.bontonAnnulerEnregistrer{
+  display: flex;
+  align-items: center;
+}
+
+/*section détails éditeurs ------------------------------------------------------------------------------------------------------------------- */
+.divTitreDetailsEditeur{
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: 3vw;
+  padding-left: 0.5%;
+}
+
+.titreEditeur{
+  font-size: 2.5vw;
+}
+
+/*section modifier éditeurs ------------------------------------------------------------------------------------------------------------------- */
+.titreModifierEditeur{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 3vw;
+  margin: 0;
+  width: 30vw;
+}
+
+.allModifierEditeur{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5%;
+}
+
+.imageEditeur{
+  width: 30vw;
+  height: 30vw;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+}
+
+.imageModifierEditeur{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+.boutonAnnulerEnregistrer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+/*section créer un éditeur ------------------------------------------------------------------------------------------------------------------- */
+.formCreerEditeur{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-left: 35%;
+}
+
+/*section créer un jeu ------------------------------------------------------------------------------------------------------------------- */
+#genreCreerJeux{
+  margin-bottom: 1vw;
+}
+
+#editeurCreerJeux{
+  margin-bottom: 1vw;
+}
+
+#misEnAvantCreerJeux{
+  margin-bottom: 1vw;
+}
+
+#imageCreerJeux{
+  margin-bottom: 1vw;
+}
+
+#descriptionCreerJeux{
+  height: 20vw;
+}
